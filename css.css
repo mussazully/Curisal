@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between; /* Spread items across the navbar */
     align-items: center;
-    background-color: #ffe0eb;
+    background-color: #f1faee;
     padding: 5px 20px; /* Reduce padding to make navbar smaller */
 }
 
@@ -44,7 +44,7 @@
     border-radius: 5px;
 }
 .navbar ul li a:hover{
-    background-color: #efaaff;
+    background-color: #a8dadc;
 }
 .navbar ul li a:active{
     background-color: #FFA1C5;
@@ -59,7 +59,7 @@
 .signupbtn,
 .loginbtn{
     padding: 8px 12px; /* Keep button padding smaller */
-    background-color:  #cf00ff;
+    background-color:  #457b9d;
     color: white;
     border: none;
     font-size: 16px; /* Increase button text size */
@@ -70,20 +70,20 @@
     color: white;
 }
 .loginbtn:hover{
-    background-color: #efaaff;
+    background-color: #a8dadc;
     color: black;
 }
 
 .loginbtn:active{
-    background-color: #f95795;
+    background-color: #7fc4c6;
     color: black;
 }
 .signupbtn:hover{
-    background-color: #efaaff;
+    background-color: #a8dadc;
     color: black;
 }
 .signupbtn:active{
-    background-color: #f95795;
+    background-color: #7fc4c6;
     color: black;
 }
 /* Responsive Design */
