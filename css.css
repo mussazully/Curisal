@@ -1,0 +1,86 @@
+/* Logo */
+.logopic {
+    width: 150px; /* Reduce logo size */
+    height: auto; /* Let the height adjust based on the width */
+    margin: auto;
+}
+
+/* Navigation Bar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spread items across the navbar */
+    align-items: center;
+    background-color: aqua;
+    padding: 5px 20px; /* Reduce padding to make navbar smaller */
+}
+
+/* Left Section: Logo */
+.navbar .logo {
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+    margin-right: auto; /* Pushes the rest of the content to the right */
+}
+
+/* Center Section: Navigation Links */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: right; /* Keep navigation items aligned to the right */
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Increase font size */
+    padding: 5px 10px; /* Reduce padding for a more compact look */
+    background-color: transparent;
+    display: block;
+    text-align: center;
+}
+
+/* Right Section: Control and Login Buttons */
+.navbar .controls {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-left: 20px; /* Ensure buttons are slightly away from nav items */
+}
+
+.signupbtn,
+.loginbtn {
+    padding: 8px 12px; /* Keep button padding smaller */
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px; /* Increase button text size */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    
+    .controls {
+        margin-top: 10px;
+        flex-direction: row-reverse;
+    }
+}
