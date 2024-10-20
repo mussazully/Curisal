@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between; /* Spread items across the navbar */
     align-items: center;
-    background-color: aqua;
+    background-color: #ffe0eb;
     padding: 5px 20px; /* Reduce padding to make navbar smaller */
 }
 
@@ -35,14 +35,20 @@
 
 .navbar ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 18px; /* Increase font size */
     padding: 5px 10px; /* Reduce padding for a more compact look */
     background-color: transparent;
     display: block;
     text-align: center;
+    border-radius: 5px;
 }
-
+.navbar ul li a:hover{
+    background-color: #efaaff;
+}
+.navbar ul li a:active{
+    background-color: #FFA1C5;
+}
 /* Right Section: Control and Login Buttons */
 .navbar .controls {
     display: flex;
@@ -51,16 +57,35 @@
 }
 
 .signupbtn,
-.loginbtn {
+.loginbtn{
     padding: 8px 12px; /* Keep button padding smaller */
-    background-color: black;
+    background-color:  #cf00ff;
     color: white;
     border: none;
     font-size: 16px; /* Increase button text size */
     cursor: pointer;
     border-radius: 10px;
 }
+.signupbtn{
+    color: white;
+}
+.loginbtn:hover{
+    background-color: #efaaff;
+    color: black;
+}
 
+.loginbtn:active{
+    background-color: #f95795;
+    color: black;
+}
+.signupbtn:hover{
+    background-color: #efaaff;
+    color: black;
+}
+.signupbtn:active{
+    background-color: #f95795;
+    color: black;
+}
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .navbar {
