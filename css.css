@@ -1,4 +1,51 @@
-/* Logo */
+body{
+    background-color: var(--base-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --base-color:rgb(255, 255, 255);
+    --base-variant: rgb(255, 255, 255);
+    --text-color: rgb(255, 255, 255);
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+.darkmode{
+    --base-color:rgb(0, 0, 0);
+    --base-variant: rgb(255, 255, 255);
+    --text-color: #ffffff;
+    --secondary-text: rgb(252, 248, 248);
+    --primary-color: rgb(156, 142, 142);
+    --accent-color: #0071ff;
+}
+
+#themeswitch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 55px;
+    right: 20px;
+    cursor: pointer;
+}
+#themeswitch svg{
+    fill: var(--primary-color);
+}
+#themeswitch svg:last-child{
+    display: none;
+}
+.darkmode #themeswitch svg:first-child{
+    display: none;
+}
+.darkmode #themeswitch svg:last-child{
+    display: block;
+}
 .logopic {
     width: 150px; /* Reduce logo size */
     height: auto; /* Let the height adjust based on the width */
@@ -10,7 +57,7 @@
     display: flex;
     justify-content: space-between; /* Spread items across the navbar */
     align-items: center;
-    background-color: #f1faee;
+    background-color: var(--primary-color);
     padding: 5px 20px; /* Reduce padding to make navbar smaller */
 }
 
@@ -35,7 +82,7 @@
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
     font-size: 18px; /* Increase font size */
     padding: 5px 10px; /* Reduce padding for a more compact look */
     background-color: transparent;
@@ -44,10 +91,10 @@
     border-radius: 5px;
 }
 .navbar ul li a:hover{
-    background-color: #a8dadc;
+    background-color: var(--base-color);
 }
 .navbar ul li a:active{
-    background-color: #FFA1C5;
+    background-color: var(--base-color);
 }
 /* Right Section: Control and Login Buttons */
 .navbar .controls {
@@ -59,33 +106,37 @@
 .signupbtn,
 .loginbtn{
     padding: 8px 12px; /* Keep button padding smaller */
-    background-color:  #457b9d;
-    color: white;
+    background-color:  var(--base-color);
+    color: var(--text-color);
     border: none;
     font-size: 16px; /* Increase button text size */
     cursor: pointer;
     border-radius: 10px;
 }
 .signupbtn{
-    color: white;
+    color: var(--secondary-text);
+}
+.loginbtn{
+    color: var(--secondary-text);
 }
 .loginbtn:hover{
-    background-color: #a8dadc;
-    color: black;
+    background-color: var(--base-color);
+    color: var(--text-color);
 }
 
 .loginbtn:active{
-    background-color: #7fc4c6;
-    color: black;
+    background-color:var(--base-color);
+    color: var(--text-color);
 }
 .signupbtn:hover{
-    background-color: #a8dadc;
-    color: black;
+    background-color:var(--base-color);
+    color: var(--text-color);
 }
 .signupbtn:active{
-    background-color: #7fc4c6;
-    color: black;
+    background-color: var(--base-color);
+    color: var(--text-color);
 }
+
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .navbar {
