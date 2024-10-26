@@ -1,51 +1,118 @@
-body{
+:root {
+    --base-color: #caf0f8; /* Background style */
+    --base-variant: #00b4d8; /* Button background style */
+    --text-color: #03045e;
+    --secondary-text: #023e8a; /* Optional button text style */
+    --primary-color: #90e0ef; /* Hover style */
+    --accent-color: #0077b6; /* Can act as background in div */
+}
+
+.darkmode {
+    --base-color: #03045e; /* Dark background style */
+    --base-variant: #48cae4; /* Button background style */
+    --text-color: #caf0f8;
+    --secondary-text: #023e8a; /* Optional button text style */
+    --primary-color: #ade8f4; /* Hover style */
+    --accent-color: #0077b6; /* Can act as background in div */
+}
+
+body {
     background-color: var(--base-color);
     color: var(--text-color);
     font-family: 'Times New Roman', Times, serif;
-}
-:root{
-    --base-color:rgb(255, 255, 255);
-    --base-variant: rgb(255, 255, 255);
-    --text-color: rgb(255, 255, 255);
-    --secondary-text: #232738;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
-}
-.darkmode{
-    --base-color:rgb(0, 0, 0);
-    --base-variant: rgb(255, 255, 255);
-    --text-color: #ffffff;
-    --secondary-text: rgb(252, 248, 248);
-    --primary-color: rgb(156, 142, 142);
-    --accent-color: #0071ff;
+    margin: 0;
+    padding: 0;
 }
 
-#themeswitch{
-    height: 50px;
-    width: 50px;
+section {
+    height: 600px;
+    padding: 0px;
+}
+
+#home {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+}
+
+/* Theme Switch Button Styles */
+#themeswitch {
+    height: 6vw; /* Default height for larger screens */
+    width: 6vw; /* Default width for larger screens */
     padding: 0;
     border-radius: 50%;
-    background-color: var(--base-variant);
+    background-color: var(--text-color);
     display: flex;
     justify-content: center;
-    align-content: center;
-    position: fixed;
-    top: 55px;
-    right: 20px;
+    align-items: center; 
+    position: fixed; /* Fixed positioning for consistent placement */
+    top: 5%; /* Adjusted top positioning for larger screens */
+    left: 30%; /* Adjust horizontal positioning */
+    transform: translate(-50%, 0); /* Center horizontally */
     cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease; 
 }
-#themeswitch svg{
-    fill: var(--primary-color);
+
+/* Media query for smaller devices */
+@media (max-width: 600px) {
+    #themeswitch {
+        height: 6vw; /* Adjusted height for smaller screens */
+        width: 6vw; /* Adjusted width for better visibility */
+        top: 1%; /* Adjusted vertical position */
+        left: 36%; /* Center horizontally */
+        transform: translate(-50%, 0); /* Maintain horizontal centering */
+        background-color: var(--base-color); /* Temporary color to test visibility */
+    }
 }
-#themeswitch svg:last-child{
+
+/* Media query for larger devices */
+@media (min-width: 601px) {
+    #themeswitch {
+        height: 3vw; /* Increased height for better visibility */
+        width: 3vw; /* Increased width for better visibility */
+        top: 1%; /* Adjusted vertical position */
+        left: 15%; /* Center horizontally */
+        transform: translate(-50%, 0); /* Adjusted for perfect centering */
+        background-color: var(--text-color); /* Ensure it has the correct background color */
+    }
+}
+
+#themeswitch:hover {
+    background-color: #a9c0db;
+}
+
+#themeswitch:active {
+    background-color: white;
+}
+
+#themeswitch svg {
+    fill: var(--accent-color);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#themeswitch svg:last-child {
     display: none;
 }
-.darkmode #themeswitch svg:first-child{
+
+.darkmode #themeswitch svg:first-child {
     display: none;
 }
-.darkmode #themeswitch svg:last-child{
+
+.darkmode #themeswitch svg:last-child {
     display: block;
 }
+
+/* Other styles you have already defined can remain unchanged below this line */
+
+
 .logopic {
     width: 150px; /* Reduce logo size */
     height: auto; /* Let the height adjust based on the width */
@@ -55,16 +122,15 @@ body{
 /* Navigation Bar Container */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Spread items across the navbar */
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 5px 20px; /* Reduce padding to make navbar smaller */
+    background-color: var(--base-color);
+    padding: 5px 20px;
 }
 
 /* Left Section: Logo */
 .navbar .logo {
     flex-shrink: 0; /* Prevent the logo from shrinking */
-    margin-right: auto; /* Pushes the rest of the content to the right */
 }
 
 /* Center Section: Navigation Links */
@@ -85,17 +151,19 @@ body{
     color: var(--text-color);
     font-size: 18px; /* Increase font size */
     padding: 5px 10px; /* Reduce padding for a more compact look */
-    background-color: transparent;
     display: block;
-    text-align: center;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
+    background-color: var(--accent-color);
+}
+
+.navbar ul li a:active {
     background-color: var(--base-color);
 }
-.navbar ul li a:active{
-    background-color: var(--base-color);
-}
+
 /* Right Section: Control and Login Buttons */
 .navbar .controls {
     display: flex;
@@ -104,37 +172,25 @@ body{
 }
 
 .signupbtn,
-.loginbtn{
+.loginbtn {
     padding: 8px 12px; /* Keep button padding smaller */
-    background-color:  var(--base-color);
+    background-color: var(--base-variant);
     color: var(--text-color);
     border: none;
     font-size: 16px; /* Increase button text size */
     cursor: pointer;
     border-radius: 10px;
-}
-.signupbtn{
-    color: var(--secondary-text);
-}
-.loginbtn{
-    color: var(--secondary-text);
-}
-.loginbtn:hover{
-    background-color: var(--base-color);
-    color: var(--text-color);
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-.loginbtn:active{
-    background-color:var(--base-color);
-    color: var(--text-color);
+.loginbtn:hover,
+.signupbtn:hover {
+    background-color: var(--accent-color);
 }
-.signupbtn:hover{
-    background-color:var(--base-color);
-    color: var(--text-color);
-}
-.signupbtn:active{
+
+.loginbtn:active,
+.signupbtn:active {
     background-color: var(--base-color);
-    color: var(--text-color);
 }
 
 /* Responsive Design */
@@ -143,7 +199,7 @@ body{
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .navbar ul {
         flex-direction: column;
         width: 100%;
@@ -154,9 +210,72 @@ body{
     .navbar ul li {
         margin: 10px 0;
     }
-    
+
     .controls {
         margin-top: 10px;
         flex-direction: row-reverse;
     }
+}
+
+/* Preloader Overlay */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--base-color); /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Updated Loader Animation */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    animation: l14 4s infinite;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    border: 8px solid;
+    border-radius: 50%;
+    border-color: red red transparent transparent;
+    mix-blend-mode: darken;
+    animation: l14 1s infinite linear;
+}
+
+.loader::after {
+    border-color: transparent transparent blue blue;
+    animation-direction: reverse;
+}
+
+@keyframes l14 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/* Initial hidden state for page content */
+.content {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 1s ease-in-out, transform 1s ease-in; /* Transition effects */
+}
+
+/* Show content when preloader is finished */
+.content.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide down to original position */
+}
+
+/* Preloader loaded state */
+body.loaded .content {
+    opacity: 1;
+    transform: translateY(0);
 }
