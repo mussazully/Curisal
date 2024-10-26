@@ -65,7 +65,7 @@ section {
         height: 6vw; /* Adjusted height for smaller screens */
         width: 6vw; /* Adjusted width for better visibility */
         top: 1%; /* Adjusted vertical position */
-        left: 36%; /* Center horizontally */
+        left: 40%; /* Center horizontally */
         transform: translate(-50%, 0); /* Maintain horizontal centering */
         background-color: var(--base-color); /* Temporary color to test visibility */
     }
