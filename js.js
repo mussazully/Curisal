@@ -22,3 +22,19 @@ themeswitch.addEventListener("click", () => {
         disableDarkmode()
     }
 })
+
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Set a minimum display time of 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        preloader.style.display = 'none';
+    }, 1000); // 5000 ms = 5 seconds
+});
+
+window.addEventListener('load', () => {
+    const content = document.querySelector('.content');
+    content.classList.add('show'); // Apply the 'show' class to trigger the animation
+});
+
+
