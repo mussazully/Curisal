@@ -1,40 +1,40 @@
-let darkmode = localStorage.getItem('darkmode')
-const themeswitch = document.getElementById('themeswitch') // Use the correct ID
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobileMenu');
+const navLinks = document.getElementById('navLinks');
 
-const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
-}
-
-const disableDarkmode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
-}
-
-if(darkmode === "active") enableDarkmode()
-
-themeswitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode')
-    darkmode = localStorage.getItem('darkmode')
-    if (darkmode !== "active") {
-        enableDarkmode()
-    } else {
-        disableDarkmode()
-    }
-})
-
-window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
     
-    // Set a minimum display time of 5 seconds (5000 milliseconds)
-    setTimeout(function() {
-        preloader.style.display = 'none';
-    }, 1000); // 5000 ms = 5 seconds
+    // Animate hamburger to X
+    mobileMenu.classList.toggle('active');
+    const spans = mobileMenu.getElementsByTagName('span');
+    if (mobileMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+    }
 });
 
-window.addEventListener('load', () => {
-    const content = document.querySelector('.content');
-    content.classList.add('show'); // Apply the 'show' class to trigger the animation
+// Smooth Scroll for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-
+// Navbar Background Change on Scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+    }
+});
