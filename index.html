@@ -3,41 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curisal</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="icon" type="image/png" href="logo icon.png">
+    <title>TanzaniaJourneys - Experience Tanzania & Zanzibar</title>
+    <link rel="stylesheet" href="scc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="preloader" class="preloader">
-        <div class="loader"></div>
-    </div>
-    <div class="content">
-        <button id="themeswitch" class="svgbtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
-        </button>
-        <div class="navbar">
-            <div class="logo">
-                <img src="LOGO_copy-removebg-preview.png" alt="Logo" class="logopic">
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">TanzaniaJourneys</a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <a href="#Home" class="active">Home</a>
+                    <a href="#tours">Tours</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="controls">
-                <button class="signupbtn">sign up</button>
-                <button class="loginbtn">Login</button>
+            <button class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="Home">
+            <div class="hero-content">
+                <h1>Discover the Beauty of Tanzania</h1>
+                <p>Experience unforgettable adventures in Zanzibar and beyond</p>
+                <a href="/tours.html" class="cta-button">Explore Tours</a>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="locations" id="tours">
+            <div class="container">
+                <h2>We Operate In</h2>
+                <div class="location-grid">
+                    <div class="location-card">
+                        <img src="tanznia mainland.jpg" alt="Tanzania">
+                        <div class="location-info">
+                            <h3>Tanzania Mainland</h3>
+                            <p>Experience the majestic Serengeti, climb Mount Kilimanjaro, and witness the incredible wildlife in their natural habitat.</p>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <img src="why znb.jpg" alt="Zanzibar">
+                        <div class="location-info">
+                            <h3>Zanzibar</h3>
+                            <p>Discover pristine beaches, historic Stone Town, and immerse yourself in the rich Swahili culture and spice traditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Travelers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <img src="person 1.jpg" alt="Sarah Johnson">
+                        <h3>Sarah Johnson</h3>
+                        <p>The Zanzibar tour was absolutely amazing! Our guide was knowledgeable and friendly. The beaches were pristine and the local experiences were unforgettable.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="person 2.jpg" alt="Michael Chen">
+                        <h3>Michael Chen</h3>
+                        <p>Climbing Kilimanjaro with TanzaniaJourneys was a life-changing experience. The team's expertise and support made it possible to reach the summit.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="person 3.jpg" alt="Emma Williams">
+                        <h3>Emma Williams</h3>
+                        <p>The Serengeti safari exceeded all our expectations. We saw the big five and witnessed the great migration. Truly spectacular!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog" id="blog">
+            <div class="container">
+                <h2>Latest from Our Blog</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="best zanzibar time.jpg" alt="Best Time to Visit Zanzibar">
+                        <div class="blog-content">
+                            <time datetime="2024-03-15">March 15, 2024</time>
+                            <h3>Best Time to Visit Zanzibar</h3>
+                            <p>Discover the perfect seasons to explore Zanzibar's pristine beaches and historic sites...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="photo tips.jpg" alt="Safari Photography Tips">
+                        <div class="blog-content">
+                            <time datetime="2024-03-10">March 10, 2024</time>
+                            <h3>Safari Photography Tips</h3>
+                            <p>Expert tips for capturing stunning wildlife photos during your Tanzania safari...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="local food tip.jpg" alt="Local Cuisine Guide">
+                        <div class="blog-content">
+                            <time datetime="2024-03-05">March 5, 2024</time>
+                            <h3>Local Cuisine Guide</h3>
+                            <p>Explore the rich flavors and spices of Tanzanian and Zanzibari cuisine...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>TanzaniaJourneys</h3>
+                    <p>Experience the magic of Tanzania and Zanzibar with our expertly crafted tours.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact" id="contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@tanzaniajourneys.com</p>
+                    <p>Phone: +255 123 456 789</p>
+                </div>
             </div>
         </div>
+    </footer>
 
-        <section id="home">
-            <h1>Welcome to Curisal</h1>
-            <p>Your journey begins here.</p>
-            <!-- Add more content here as needed -->
-        </section>
-    </div>
-    <script src="js.js" defer></script>
+    <script src="js.js"></script>
 </body>
 </html>
