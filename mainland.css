@@ -413,7 +413,7 @@ footer {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  /*@media (max-width: 768px) {
     .nav-links {
         display: none;
         position: absolute;
@@ -457,4 +457,93 @@ footer {
     .hero p {
         font-size: 1.2rem;
     }
-  }
+  }*/
+
+
+
+
+
+
+
+/* Mobile Menu */
+/* Mobile menu hidden by default */
+.mobile-menu {
+    display: none;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    /* Menu links hidden by default */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-light);
+        padding: 1rem;
+    }
+
+    /* Display links when active */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Hover effect on links */
+    .nav-links a:hover {
+        background-color: var(--color-secondary);
+    }
+
+    /* Flex container for links (row layout) */
+    .nav-links ul {
+        display: flex; /* Ensures the list is a flex container */
+        flex-direction: row; /* Row layout for menu items */
+        justify-content: space-between; /* Evenly space the items in the row */
+        align-items: center; /* Vertically align items */
+        list-style: none; /* Removes default list styling */
+        margin: 0; /* Removes margin */
+        padding-left: 0; /* Removes left padding */
+    }
+
+    /* Style each link in the mobile menu */
+    .nav-links a {
+        text-decoration: none; /* Remove underline */
+        color: var(--color-primary); /* Link color */
+        font-size: 1.2rem; /* Font size */
+        padding: 0.5rem 1rem; /* Padding around the link */
+        display: block; /* Makes the link block-level to respect padding */
+        text-align: center; /* Centers the text */
+        transition: background-color 0.3s ease; /* Smooth transition for hover */
+    }
+
+    /* Mobile menu button */
+    .mobile-menu {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Hamburger lines */
+    .mobile-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--color-primary);
+        margin: 5px 0; /* Space between the hamburger lines */
+        transition: 0.3s;
+    }
+
+    /* Contact grid styling for mobile */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
