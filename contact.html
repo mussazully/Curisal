@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Rdx9nf3Jd3GiHZnU3");
+        })();
+    </script>
+    <link rel="icon" href="icon.png" type="png">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <img src="footer.png" alt="Logo" class="loading-logo">
+        </div>
+    </div>
+    
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html #home"><img src="logo.png" alt="logo" class="navbar-logo"></a>
+        </nav>
+    </header>
+    
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><a href="https://www.google.com/maps?q=dar+es+salaam+tanzania" target="_blank">Dar es Salaam, Tanzania</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:+255787871641">+(255) 787871641</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:mussazulfikar9@gmail.com">mussazulfikar9@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting&details=Meeting%20with%20us&dates=20240101T090000/20240101T180000&recur=RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR" target="_blank">Mon - Fri: 9:00 AM - 6:00 PM</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form" method="POST">
+                        <div class="form-group name-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group email-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group message-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                    <p id="response-message"></p>
+                </div>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="animation.js"></script>
+    <script>
+        // Check URL parameters for message status
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        
+        if (message) {
+            let alertMessage = '';
+            switch(message) {
+                case 'success':
+                    alertMessage = 'Message sent successfully!';
+                    break;
+                case 'error':
+                    alertMessage = 'Error sending message. Please try again.';
+                    break;
+                case 'invalid_email':
+                    alertMessage = 'Please enter a valid email address.';
+                    break;
+                case 'empty_fields':
+                    alertMessage = 'Please fill in all fields.';
+                    break;
+            }
+            if (alertMessage) {
+                alert(alertMessage);
+            }
+        }
+    </script>
+        <script src="form.js"></script>
+    <script src="loading.js"></script>
+</body>
+</html>
