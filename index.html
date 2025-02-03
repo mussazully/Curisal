@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; frame-src https://cdn.botpress.cloud/ https://creator.voiceflow.com/;">
     <meta name="description" content="Creative digital agency specializing in web design and development">
     <title>Curisal</title>
     <link rel="stylesheet" href="./main.css" onerror="console.error('Failed to load main.css')">
@@ -11,14 +10,7 @@
     <link rel="stylesheet" href="./loading.css" onerror="console.error('Failed to load loading.css')">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="icon.png" type="png">
-    <script>
-        window.addEventListener('load', function() {
-            const styles = getComputedStyle(document.querySelector('.form-group'));
-            if (!styles || !styles.background) {
-                console.error('Form styles not applied');
-            }
-        });
-    </script>
+
 </head>
 <body>
     <div class="loading-screen">
