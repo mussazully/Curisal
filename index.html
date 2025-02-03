@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; frame-src https://cdn.botpress.cloud/ https://creator.voiceflow.com/;">
+    <meta name="description" content="Creative digital agency specializing in web design and development">
+    <title>Curisal</title>
+    <link rel="stylesheet" href="./main.css" onerror="console.error('Failed to load main.css')">
+    <link rel="stylesheet" href="./animation.css" onerror="console.error('Failed to load animation.css')">
+    <link rel="stylesheet" href="./loading.css" onerror="console.error('Failed to load loading.css')">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="icon.png" type="png">
+    <script>
+        window.addEventListener('load', function() {
+            const styles = getComputedStyle(document.querySelector('.form-group'));
+            if (!styles || !styles.background) {
+                console.error('Form styles not applied');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <img src="footer.png" alt="Logo" class="loading-logo">
+        </div>
+    </div>
+
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-brand">
+                <img src="logo.png" alt="logo" class="navbar-logo">
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <h1>We Create Digital Experiences</h1>
+                    <p>Transform your vision into reality with our creative solutions that drive growth and innovation.</p>
+                    <form id="emailForm" class="email-form" onsubmit="return handleEmailSubmit(event)">
+                        <div class="form-group">
+                            <i class="fas fa-envelope"></i>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                placeholder="Enter your email" 
+                                required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                title="Please enter a valid email address"
+                            >
+                            <button type="submit" class="btn btn-primary">
+                                Get Started
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+                <div class="hero-image">
+                    <img src="hero section.avif" 
+                         alt="Creative team working together">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <a href="OUR SERVICE1.HTML" class="service-card">
+                        <div class="service-image">
+                            <img src="website.avif" 
+                                 alt="Web Design Service">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">🎨</div>
+                            <h3>Web Design</h3>
+                            <p>Beautiful, responsive websites that engage your audience</p>
+                        </div>
+                    </a>
+                    
+                    <a href="ourservicegallery.html" class="service-card">
+                        <div class="service-image">
+                            <img src="photoshop.png" 
+                                 alt="Digital Design">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">💻</div>
+                            <h3>Digital Design</h3>
+                            <p>Custom web applications built with modern technologies</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="service-card">
+                        <div class="service-image">
+                            <img src="video.jpg" 
+                                 alt="video Service">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">📹</div>
+                            <h3>Video Production</h3>
+                            <p>Native and cross-platform mobile applications</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Our Journey</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">🚀</div>
+                        <img src="teamwork.avif" 
+                             alt="Innovation">
+                        <h3>Innovation First</h3>
+                        <p>We push boundaries to transform your ideas into reality using cutting-edge technology.</p>
+                    </div>
+        
+                    <div class="about-card">
+                        <div class="about-icon">🎯</div>
+                        <img src="presentation.avif" 
+                             alt="Strategy">
+                        <h3>Strategic Approach</h3>
+                        <p>Every project begins with thorough research and a tailored strategy for success.</p>
+                    </div>
+        
+                    <div class="about-card">
+                        <div class="about-icon">💡</div>
+                        <img src="working.avif" 
+                             alt="Creative Solutions">
+                        <h3>Creative Solutions</h3>
+                        <p>We turn complex challenges into elegant, user-friendly solutions.</p>
+                    </div>
+        
+                    <div class="about-card">
+                        <div class="about-icon">🤝</div>
+                        <img src="collaboration.avif" 
+                             alt="Collaboration">
+                        <h3>True Partnership</h3>
+                        <p>Working closely with you, we ensure your vision comes to life exactly as imagined.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home"><img src="footer.png" alt="logo" class="footer-logo"></a> 
+                    <p class="footer-description">
+                        Transforming ideas into exceptional digital experiences through innovative content management solutions.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="icon-mail"></i>
+                            <a href="mailto:info@curisal.co.tz"><span>info@curisal.co.tz</span></a>
+                        </div>                        
+                        <div class="contact-item">
+                            <i class="icon-phone"></i>
+                            <a href="tel:+255787871641"><span>+255 787 871 641</span></a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-map"></i>
+                            <a href="https://www.google.com/maps/search/Dar+es+Salaam,+Tanzania" target="_blank">
+                                <span>Dar es Salaam, Tanzania</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#mobile-apps">Mobile Apps</a></li>
+                        <li><a href="#consulting">Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+                <p class="copyright">&copy; 2024 Creative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./loading.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

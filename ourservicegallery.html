@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Curisal</title>
+    <link rel="stylesheet" href="mainservice.css">
+    <link rel="stylesheet" href="galerry.css">
+    <link rel="icon" href="icon.png" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="Curisal" class="logo-img">
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html #home">Home</a></li>
+                <li><a href="index.html #services" class="active">Services</a></li>
+                <li><a href="index.html #about">About</a></li>
+                <li><a href="contact.html" class="nav-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="services-hero">
+            <h1>Digital Design</h1>
+            <p>Overlook your Idea with image to help elevate you client with knowledge about you company</p>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item" data-title="Curix-Tech Brochure" data-description="A Four Face brochure with a well detailed explanation of the company with explanation">
+                <img src="mywork/brochure real copy.png" 
+                     alt="Web Development" loading="lazy">
+                <img src="mywork/brochure real content copy.png" 
+                     alt="Web Development" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Curix-Tech Brochure</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-title="Recruitment Poster" data-description="A Content that represent Un-ussual/ unfollowed rule in HR world">
+                <img src="mywork/Hr Fact copy.png" 
+                     alt="Recruitment Poster">
+                <div class="gallery-overlay">
+                    <h3>Recruitment Poster</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Digital Design" data-description="Marketing content for IT Company">
+                <img src="mywork/building website copy.png" 
+                     alt="Recruitment Poster">
+                <div class="gallery-overlay">
+                    <h3>Build your Idea</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Marketing" data-description="A Content that many ussually gets wrong">
+                <img src="mywork/mythbusted copy.png" 
+                     alt="Recruitment Poster">
+                <div class="gallery-overlay">
+                    <h3>Buzz words</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Frequently Asked Question" data-description="Just answer many question at once with Marketing">
+                <img src="mywork/FAQ copy.png" 
+                     alt="Recruitment Poster">
+                <div class="gallery-overlay">
+                    <h3>FAQ for recruitment Company</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div> 
+            <div class="gallery-item" data-title="Perfume Post" data-description="Take your ideas into an image and watch your business grow">
+                <img src="mywork/PERFUME AD 1 copy.jpg" 
+                     alt="Recruitment Poster">
+                <div class="gallery-overlay">
+                    <h3>Powerful Perfume Poster</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div> 
+            <div class="gallery-item" data-title="Biriani Post" data-description="Food is only thing that is interesting">
+                <img src="mywork/Biriani copy.jpg" 
+                     alt="Biriani Poster">
+                <div class="gallery-overlay">
+                    <h3>Biriani Post</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div> 
+            <div class="gallery-item" data-title="Burger post" data-description="Order you own burger">
+                <img src="mywork/burger order copy.jpg" 
+                     alt="Burger poster">
+                <div class="gallery-overlay">
+                    <h3>Burger Post</h3>
+                    <p>Click to view details</p>
+                </div>
+            </div> 
+        </section>
+
+        <div class="modal" id="imageModal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-content">
+                <button class="nav-btn" id="prevImage">&lt;</button>
+                <img src="" alt="" id="modalImage">
+                <button class="nav-btn" id="nextImage">&gt;</button>
+                <div class="modal-text">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div class="modal-caption" id="caption"></div>
+        </div>
+
+        <div class="modal" id="imageModal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-content">
+                <img src="" alt="" id="modalImage">
+                <div class="modal-text">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoomOut"><i class="fas fa-search-minus"></i></button>
+                <button class="zoom-btn" id="zoomReset"><i class="fas fa-compress"></i></button>
+                <button class="zoom-btn" id="zoomIn"><i class="fas fa-search-plus"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="footer.png" alt="Curisal" class="footer-logo">
+                <p>Transforming ideas into exceptional digital experiences</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html #home">Home</a></li>
+                    <li><a href="index.html #services" class="active">Services</a></li>
+                    <li><a href="index.html #about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mussazulfikar9@gmail.com"><span>mussazulfikar9@gmail.com</span></a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+255787871641"><span>+255 787 871 641</span></a></p>
+                <p><i class="fas fa-map-marker-alt"></i><a href="https://www.google.com/maps/search/Dar+es+Salaam,+Tanzania" target="_blank">
+                    <span>Dar es Salaam, Tanzania</span>
+                </a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Curisal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="mainservice.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
