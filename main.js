@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="chat-widget-content">
             <iframe
-                src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/03/11/20250203114600-7QEM4NB2.json"
+                src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/04/08/20250204081047-G6AST7VB.json"
                 width="100%"
                 height="100%"
                 frameborder="0"
